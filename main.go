@@ -121,7 +121,8 @@ func isArabic(operand string) bool {
 // парсинг арабских чисел
 func parseArabic(operand string) (int, error) {
 
-	if len(operand) != 1 || len(operand) > 3 {
+	if len(operand) != 1 && len(operand) != 3 {
+		fmt.Println(len(operand))
 		return 10, nil
 	}
 
