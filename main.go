@@ -97,14 +97,12 @@ func parseRoman(operand string) (int, error) {
 
 	for i := 0; len(operand)-1 >= i; i++ {
 		vale := romanNums[rune(operand[i])]
-		if vale < prevVal {
-			result -= vale
+		if vale > prevVal {
+			result = vale - prevVal
 		} else {
 			result += vale
 		}
-
 		prevVal = vale
-
 	}
 
 	return result, nil
