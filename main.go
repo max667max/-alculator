@@ -110,7 +110,7 @@ func parseRoman(operand string) (int, error) {
 
 // проверка, является ли операнд арабским числом
 func isArabic(operand string) bool {
-	if strings.Contains("12345678", string(operand[0])) {
+	if strings.Contains("123456789", string(operand[0])) {
 		return true
 	}
 	return false
